@@ -79,7 +79,7 @@ def f06(string1, string2):
         print(string2 + " is longer than " + string1 + " by " + str(len(string2)-len(string1)) + " chars")
         print(string1 + " has only " + str(round((len(string1)/len(string2)*100), 2)) + "% the number of chars of " + string2)
     else:
-        print(string1 + " is of he same lenght as " + string2)
+        print(string1 + " is of the same lenght as " + string2)
 
     various_solutions()  # Last line in f06()
 
@@ -116,23 +116,36 @@ def various_solutions():
 
 ###############################################################################
 def f07():
+    num = 1
     my_sum = 0
-    while num <= 500:
-        my_sum = 
-        num += num
-
+    while num in range(500):
+        if num % 3 == 0 or num % 5 == 0:
+            my_sum = my_sum+num
+            num +=1
+        else:
+            num +=1
+    print(my_sum)
 
 
 ###############################################################################
 def f08():
-    for num in numbers:
+    num = 1
+    my_sum = 0
+    for num in range(500):
+        if num % 3 == 0 or num % 5 == 0:
+            my_sum = my_sum+num
+            num +=1
+        else:
+            num +=1
+    print(my_sum)
+
 
 
 
 ###############################################################################
 def f09():
-    ...
-[i for i in range(1000) if i % 3 == 0 or i % 5 == 0]
+    result = sum(i for i in range(500) if i % 3 == 0 or i % 5 == 0)
+    print(result)
 
 ###############################################################################
 def f10():
